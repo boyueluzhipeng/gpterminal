@@ -35,23 +35,23 @@ gpterminal
 1. 聊天
 
    ```
-   gpterminal chat
+   gt chat
    ```
 
 2. Git 命令行助手
 
    ```
-   gpterminal git
+   gt git
    ```
 
 3. 代码执行
 
    ```
-   gpterminal run your-command
+   gt run your-command
    ```
 
 
-当您在终端中输入 `gpterminal`令时，如果提示 `Command not found`，这可能是因为您的系统未将 `gpterminal` 命令添加到 PATH 环境变量中。在这种情况下，您可以按照以下步骤操作：
+当您在终端中输入 `gt`令时，如果提示 `Command not found`，这可能是因为您的系统未将 `gt` 命令添加到 PATH 环境变量中。在这种情况下，您可以按照以下步骤操作：
 
 ### 在 macOS 或 Linux 上
 
@@ -69,7 +69,7 @@ gpterminal
    source ~/.bashrc
    ```
 
-   现在，您应该能够在终端中使用 `gpterminal` 命令了。
+   现在，您应该能够在终端中使用 `gt` 命令了。
 
 ### 在 Windows 上
 
@@ -83,7 +83,7 @@ gpterminal
 
 2. 然后，关闭并重新打开命令提示符，或者注销并重新登录您的 Windows 帐户。
 
-   现在，您应该能够在命令提示符中使用 `gpterminal` 命令了。
+   现在，您应该能够在命令提示符中使用 `gt` 命令了。
 
 
 ## 问题

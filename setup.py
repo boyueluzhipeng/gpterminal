@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="gpterminal",
-    version="0.1.5",
+    version="0.1.7",
     author="Your Name",
     author_email="your.email@example.com",
     description="A CLI tool to interact with GPT-3/GPT-4, answer Git questions, and execute commands",
@@ -36,7 +36,7 @@ setup(
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "gpterminal=cli.cli:gpterminal",
+            "gt=cli.cli:gpterminal",
         ],
     },
 )
