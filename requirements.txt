@@ -1,0 +1,7 @@
+click==8.0.1
+requests==2.26.0
+rich==10.3.0
+pathlib==1.0.1
+openai
+tiktoken
+prompt_toolkit==3.0.20

@@ -1,0 +1,13 @@
+README.md
+setup.py
+cli/ChatGPT.py
+cli/__init__.py
+cli/cli.py
+cli/code_execution.py
+cli/utils.py
+gpterminal.egg-info/PKG-INFO
+gpterminal.egg-info/SOURCES.txt
+gpterminal.egg-info/dependency_links.txt
+gpterminal.egg-info/entry_points.txt
+gpterminal.egg-info/requires.txt
+gpterminal.egg-info/top_level.txt

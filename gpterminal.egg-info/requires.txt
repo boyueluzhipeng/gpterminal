@@ -1,0 +1,7 @@
+click
+requests
+rich
+pathlib
+openai
+tiktoken
+prompt_toolkit
