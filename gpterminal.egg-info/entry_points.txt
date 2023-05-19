@@ -1,2 +1,0 @@
-[console_scripts]
-gpterminal = cli.cli:gpterminal
