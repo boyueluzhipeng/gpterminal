@@ -11,6 +11,12 @@ from .code_execution import *
 import yaml
 from pathlib import Path
 
+import readline
+# 配置 readline
+readline.parse_and_bind("set enable-meta-key on")
+readline.parse_and_bind("set input-meta on")
+readline.parse_and_bind("set output-meta on")
+readline.parse_and_bind("set convert-meta off")
 sys.stdin.reconfigure(encoding='utf-8')
 
 @click.command()

@@ -1,135 +1,132 @@
+
+[中文README](README_CN.md)
 # GPTerminal
 
-GPTerminal 是一个基于 GPT 模型的命令行工具，旨在帮助用户解决各种编程问题，提供智能问答和代码执行功能。
+GPTerminal is a command-line tool based on the GPT model, designed to help users solve various programming problems, providing intelligent Q&A and code execution functions.
 
-## 功能
+## Features
 
-1. 聊天：与 GPT-3 或 GPT-4 进行智能聊天。
-2. Git 命令行助手：根据您的问题提供 Git 命令帮助。
-3.代码执行：执行命令并捕获错误输出及其上下文，提供智能解决方案。
+1. Chatting: Smart chat with GPT-3 or GPT-4.
+2. Git CLI Assistant: Provide Git command help based on your questions.
+3. Code Execution: Execute commands and capture error output and their context, providing intelligent solutions.
 
-## 安装
+## Installation
 
-确保安装 Python 3.6 或更高版本。然后运行：
+Make sure you have Python 3.6 or higher installed. Then run:
 
 ```bash
 pip install gpterminal
 
-或者
+or
 
 pip install gpterminal -i https://pypi.org/simple/ 
 ```
 
-## 使用
+## Usage
 
-在命令行中输入以下命令启动 gpterminal
+Enter the following command in the terminal to start gpterminal:
 
 ```bash
 gpterminal
 ```
 
-然后选择您想要使用的功能。
+Then choose the feature you want to use.
 
-### gt 使用方法
+### gt Usage
 
-1. 聊天
+1. Chatting
 
    ```
    gt chat
    ```
 
-2. Git 命令行助手
+2. Git CLI Assistant
 
    ```
    gt git
    ```
 
-3. 代码执行
+3. Code Execution
 
    ```
    gt run your-command
    ```
 
+If you get the message `Command not found` when you enter the `gt` command in the terminal, it may be because your system has not added the `gt` command to the PATH environment variable. In this case, you can follow these steps:
 
-当您在终端中输入 `gt`令时，如果提示 `Command not found`，这可能是因为您的系统未将 `gt` 命令添加到 PATH 环境变量中。在这种情况下，您可以按照以下步骤操作：
+### On macOS or Linux
 
-### 在 macOS 或 Linux 上
-
-1. 打开终端并输入以下命令：
+1. Open a terminal and enter the following command:
 
    ```
    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
    ```
 
-   这将向您的 `.bashrc` 文件添加一行，该行将 `~/.local/bin` 目录添加到 PATH 环境变量中。
+   This will add a line to your `.bashrc` file that adds the `~/.local/bin` directory to the PATH environment variable.
 
-2. 然后，重新加载您的 `.bashrc` 文件：
+2. Then, reload your `.bashrc` file:
 
    ```bash
    source ~/.bashrc
    ```
 
-   现在，您应该能够在终端中使用 `gt` 命令了。
+   Now you should be able to use the `gt` command in the terminal.
 
-### 在 Windows 上
+### On Windows
 
-1. 打开命令提示符并输入以下命令：
+1. Open a command prompt and enter the following command:
 
    ```batch
    setx PATH "%USERPROFILE%\AppData\Roaming\\PythonXX\Scripts;%PATH%"
    ```
 
-   请注意，将 `PythonXX` 替换为您的 Python 版本号，例如 `Python36` 或 `Python39`。
+   Note that you should replace `PythonXX` with your Python version number, such as `Python36` or `Python39`.
 
-2. 然后，关闭并重新打开命令提示符，或者注销并重新登录您的 Windows 帐户。
+2. Then, close and reopen the command prompt, or log out and log back in to your Windows account.
 
-   现在，您应该能够在命令提示符中使用 `gt` 命令了。
+   Now you should be able to use the `gt` command in the command prompt.
 
-## gs使用方法
+## gs Usage
 
-1. 打开终端，输入 `gs` 并回车，启动 GPTTerminal。
-2. 根据提示，输入命令行或自然语言。例如：`压缩文件夹`。
-3. GPTTerminal 会根据您的输入生成多个相关的命令行代码，显示在屏幕上，供您选择。
-4. 使用方向键上下选择您认为最合适的命令行代码，按回车确认。
-5. 系统会询问您是否要执行该命令，输入 `Y` 或 `n` 决定是否执行。
-6. 如果您选择执行命令，GPTTerminal 会执行您选择的命令行代码。
-7. 若要退出 GPTTerminal，输入 `exit` 并回车。
+1. Open a terminal, enter `gs`, and press Enter to start GPTTerminal.
+2. Enter a command line or natural language according to the prompt. For example: `compress folder`.
+3. GPTTerminal will generate multiple related command-line codes based on your input, displayed on the screen for you to choose from.
+4. Use the up and down arrow keys to select the command-line code that you think is most appropriate, and press Enter to confirm.
+5. The system will ask you whether to execute the command. Enter `Y` or `n` to decide whether to execute.
+6. If you choose to execute the command, GPTTerminal will execute the command-line code you selected.
+7. To exit GPTTerminal, enter `exit` and press Enter.
 
-## 示例
+## Example
 
-以下是一个使用 GPTTerminal 的示例：
+Here is an example of using GPTTerminal:
 
 ```
 $ gs
-请输入命令行或自然语言: 压缩文件夹
-│ [>]使用zip压缩test文件夹                                                        
-│   zip -r test.zip test                                                         
-│ [ ]使用tar压缩test文件夹                                                        
-│   tar -czvf test.tar.gz test          
-│ [ ]重新输入    
-│   重新输入
+Please enter a command line or natural language: compress folder
+│ [>]Compress the test folder using zip                                                       
+│   zip -r test.zip test                                                                      
+│ [ ]Compress the test folder using tar                                                       
+│   tar -czvf test.tar.gz test                                                                 
+│ [ ]Re-enter                                                                                 
+│   Re-enter
 ```
 
-在这个示例中，用户输入了`压缩文件夹`，GPTTerminal 生成了两个相关的命令行代码，并显示在屏幕上。用户使用方向键选择了使用 `zip` 命令压缩文件夹，然后按回车确认。接着，系统询问用户是否执行选择的命令，用户输入 `Y`，GPTTerminal 执行了相应的命令。
+In this example, the user entered `compress folder`, and GPTTerminal generated two related command-line codes, which were displayed on the screen. The user selected to compress the folder using the `zip` command using the arrow keys, and then pressed Enter to confirm. Then, the system asked the user whether to execute the selected command, and the user entered `Y`. GPTTerminal executed the corresponding command.
 
-## 注意事项
+## Notes
 
-- GPTTerminal 是基于 GPT-3.5 模型开发的，虽然它可以生成很多有用的命令行代码，但不能保证所有生成的代码都是正确的。在执行命令前，请确保您了解命令的含义和可能的影响。
-- 在使用 GPTTerminal 时，建议您在一个安全的环境中进行操作，以防止因误操作导致的数据丢失或其他问题。
+- GPTTerminal is developed based on the GPT-3.5 model. Although it can generate many useful command-line codes, it cannot guarantee that all generated codes are correct. Before executing a command, please make sure you understand the meaning of the command and its possible effects.
+- When using GPTTerminal, it is recommended that you operate in a secure environment to prevent data loss or other issues caused by misoperations.
 
+## Issues
+1. api_key (required) and base_url (optional) need to be set.
+2. For those who need api_key, please be patient. I will modify the way to obtain api_key in the code later, so that everyone can use it directly.
+3. I am still developing the specific way to obtain a free api_key, and will update it later. Please stay tuned.
 
-## 问题
-1. 需要设置api_key(必填)以及base_url(可选)
-2. 需要 api_key 的也可以耐心等待，后续我会修改代码中获取 api_key 的方式，可以让大家直接使用
-3. 具体免费 api_key 的获取方式我还在开发中，后续会更新，敬请期待
+## Contributing
 
-## 贡献
+Contributions to GPTerminal are welcome! Please ensure that your code meets the project's quality standards before submitting a Pull Request.
 
-欢迎对 GPTerminal 进行贡献！请在提交 Pull Request 之前确保您的代码符合项目的质量标准。
+## License
 
-## 许可
-
-GPTerminal 采用 MIT 许可证。有关详细信息，请参阅 [LICENSE](LICENSE) 文件。
-
-
-
+GPTerminal is licensed under the MIT license. For more information, see the [LICENSE](LICENSE) file.
