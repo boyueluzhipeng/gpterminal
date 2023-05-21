@@ -127,6 +127,7 @@ In this example, the user enters `compress folder`, and GPTTerminal generates tw
 6. The usage limit of the free API key is 2000 times per day for GPT-3.5 and 500 times per day for GPT-4.
 7. The free API key has no rate limit, but please do not abuse it.
 8. If you need a larger usage quota, you can contact me, and I can provide a paid API key. You can also ask me for it by adding my WeChat ID as a friend.
+9. 我的微信号是luzhipeng
 
 ## Contribution
 
